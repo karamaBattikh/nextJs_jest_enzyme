@@ -17,9 +17,14 @@ module.exports = {
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'json'],
   moduleNameMapper: {
-    '\\.(scss|sass|css)$': 'identity-obj-proxy',
+    "@/(.*)$":"<rootDir>/src/$1",
+    // '@/components/(.*)': '<rootDir>/src/components/$1',
+    '\\.(scss|sass|css)$': 'identity-obj-proxy'
   },
   preset: 'ts-jest',
+  roots: [
+    '<rootDir>/src'
+],
   setupFiles: ['<rootDir>/setupTests.ts'],
   testEnvironment: 'jsdom',
   testPathIgnorePatterns: ['/.next/', '/node_modules/', '/lib/', '/tests/', '/coverage/', '/.storybook/'],

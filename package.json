@@ -10,7 +10,7 @@
     "lint:fix": "npm run lint -- --fix",
     "format": "prettier --ignore-path .gitignore --write  ./src/",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "npm run test:watch -- --coverage"
   },
   "dependencies": {
     "@types/enzyme": "^3.10.12",
